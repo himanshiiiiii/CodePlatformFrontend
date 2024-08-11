@@ -43,6 +43,7 @@ export class DifficultyProblemsComponent implements OnInit {
 
   constructor(private route:ActivatedRoute,private router:Router,private http:HttpClient) { }
   
+  //refining list based on difficulty of problem
   refineList():void{
     this.problemList=this.problemList.filter((problem:Problem)=>{
       return problem.difficulty == this.difficulty;
@@ -50,6 +51,10 @@ export class DifficultyProblemsComponent implements OnInit {
 
   }
 
+
+
+  //Checks if there's a difficulty,if not  not
+  // it marks the difficulty as invalid and redirects the user to the general problems 
   ngOnInit(): void {
     if (this.route.snapshot.paramMap.get('difficulty')) {
       this.difficulty = String(this.route.snapshot.paramMap.get('difficulty'));
@@ -64,6 +69,7 @@ export class DifficultyProblemsComponent implements OnInit {
     this.http.post<ProblemsResponse>(this.url,getProblemsRequestBody,{"headers":this.headers}).subscribe((response:ProblemsResponse)=>{
       console.log(response)
       if(response.accepted=='yes'){
+        //if yes gives problems based on difficulty
         this.problemList=response.problemList;
         this.refineList();
       }else{
