@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signin-wrapper {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    font-size: calc(1vw + 1vh + 1em);
+    text-align: center;
+    background-color: #1f1f1f;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.invalid-cred {
+    font-size: large;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #b0bec5;
+}
+
+input {
+    outline: none;
+    border: 1px solid #424242;
+    background-color: #212121;
+    color: #e0e0e0;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #64b5f6;
+    box-shadow: 0 0 5px rgba(100, 181, 246, 0.5);
+}
+
+button.btn-primary {
+    width: 50%;
+    background-color: #64b5f6;
+    font-size: 1rem;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-primary:hover {
+    background-color: #42a5f5;
+}
+
+button.btn-secondary {
+    width: 50%;
+    background-color: #333333;
+    font-size: 1rem;
+    color: #ffa726;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-secondary:hover {
+    background-color: #ffa726;
+    color: #333333;
+}
+
+.redirect-wrapper {
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .signin-wrapper {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
